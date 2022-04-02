@@ -1,0 +1,54 @@
+{
+  "name": "vite-plugin-electron-config",
+  "version": "1.0.0",
+  "description": "Electron plugin for Vite",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "author": "Alex Wei<https://github.com/alex8088>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alex8088/vite-plugin-electron-config.git"
+  },
+  "bugs": {
+    "url": "https://github.com/alex8088/vite-plugin-electron-config/issues"
+  },
+  "homepage": "https://github.com/alex8088/vite-plugin-electron-config#readme",
+  "keywords": [
+    "electron",
+    "vite",
+    "plugin"
+  ],
+  "scripts": {
+    "format": "prettier --write .",
+    "lint": "eslint --ext .ts src/**",
+    "typecheck": "tsc --noEmit",
+    "build": "npm run lint && tsup src/index.ts --dts --format cjs,esm"
+  },
+  "peerDependencies": {
+    "electron": ">=13.0.0",
+    "vite": "^2.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "16.11.22",
+    "@typescript-eslint/eslint-plugin": "^5.17.0",
+    "@typescript-eslint/parser": "^5.17.0",
+    "eslint": "^8.12.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.6.1",
+    "tsup": "^5.12.2",
+    "typescript": "^4.5.5",
+    "vite": "^2.9.1"
+  }
+}
